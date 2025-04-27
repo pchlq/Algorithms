@@ -1,3 +1,5 @@
+import model.ListNode;
+
 /**
  * Leetcode
  * @see <a href="https://leetcode.com/problems/reverse-linked-list/description/">206. Reverse Linked List</a>
@@ -14,6 +16,7 @@ public class ReverseListSolution {
 
         System.out.println(ln1);
         System.out.println(reverseList(ln1));
+
     }
 
     public static ListNode reverseList(ListNode head) {
@@ -27,21 +30,5 @@ public class ReverseListSolution {
             current = nextNode;
         }
         return prev;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
     }
 }

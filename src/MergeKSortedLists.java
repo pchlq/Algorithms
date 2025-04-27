@@ -1,3 +1,5 @@
+import model.ListNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,7 +64,6 @@ public class MergeKSortedLists {
         return fake.next;
     }
 
-
     private static List<Integer> retrieveValues(ListNode ln) {
         List<Integer> res = new ArrayList<>();
 
@@ -72,22 +73,5 @@ public class MergeKSortedLists {
             ln = next;
         }
         return res;
-    }
-
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
     }
 }
